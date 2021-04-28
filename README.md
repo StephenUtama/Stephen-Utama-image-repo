@@ -10,6 +10,6 @@ using the application!
 
 ## Unit Test
 
-To run the tests, run `python -m unittest purchasetest.py`. The first test mimics a user
-purchasing a product successfully. The second test tests to see if the correct response
-is return upon unsuccessful retrieval of a product that is not in the databasee.
+To run the tests, run `python -m unittest purchasetest.py`. 
+The first test mimics a user purchasing a product successfully. 
+The second test tests to see if the correct response is return upon unsuccessful retrieval of a product that is not in the databasee.
