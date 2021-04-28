@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Image Repository</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}">
+    </head>
+
+    <body>
+        <a href="/">Main page</a> <br>
+        <a id="discount" href="/discount">Click here for a 10% discount on all products!</a> <br>
+
+        <br>
+        <p>Total Amount:</p>
+        <p id="amount">${{earnings}}</p> <br>
+
+        <table id="styled-table" border = 1>
+            <thead>
+                <td>Name</td>
+                <td>Price</td>
+                <td>Stock</td>
+                <td>Image</td>
+                <td></td>
+            </thead>
+            
+            {% for product in products %}
+                <tr>
+                <td>{{product["name"]}}</td>
+                <td>{{product["price"]}}</td>
+                <td>{{product["stock"]}}</td>
+                <td><img src='{{product["src"]}}' /></td>
+                <td><a href='/buy/{{product["id"]}}'>BUY</button></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </body>
+</html>
